@@ -8,19 +8,12 @@
  */
 
 module.exports = {
-    entry: './src/ReactCompass.jsx',
+    entry: './src/example.jsx',
     output: {
-        path: __dirname + '/dist',
-        libraryTarget: 'umd',
-        library: 'ReactCompass',
-        filename: 'react-compass.min.js'
+        publicPath: 'http://localhost:9090/assets'
     },
-    devtool: 'source-map',
     module: {
         loaders: require('./loaders.config')
-    },
-    externals: {
-        react: 'React'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
