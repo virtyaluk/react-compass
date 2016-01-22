@@ -10,8 +10,12 @@
 module.exports = [
     {
         test: /(\.jsx|\.js)$/,
-        preLoaders: ['eslint-loader'],
-        loaders: ['babel-loader'],
+        loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/
+    },
+    {
+        test: /(\.jsx|\.js)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules|bower_components|example|dist)/
     }
 ];
