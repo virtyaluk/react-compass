@@ -17,13 +17,13 @@ class ReactApp extends React.Component {
     };
 
     render() {
-        var rangeOnChange = (e) => this.setState({rangeVal: e.target.value });
+        let rangeOnChange = (e) => this.setState({ rangeVal: parseInt(e.target.value, 10) });
 
         return (
             <div>
-                <ReactCompass direction={this.state.rangeVal} />
+                <ReactCompass direction={this.state.rangeVal}/>
                 <input type="range" onChange={rangeOnChange.bind(this)} onInput={rangeOnChange.bind(this)}
-                       style={ {marginTop: '15px', width: '400px' } } max="180" min="-180" />
+                       style={ { marginTop: '15px', width: '520px' } } max="360" min="0"/>
             </div>
         );
     }

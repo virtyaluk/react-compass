@@ -5,6 +5,27 @@
     <title>ReactCompass example</title>
     <link rel="stylesheet" href="react-compass.min.css">
     <style>
+        /* Uncomment this if you want to use Google web fonts
+        @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700,300);*/
+
+        @font-face {
+            font-family: 'Roboto Slab';
+            src: url('font/RobotoSlab-Regular.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: "Roboto Slab";
+            src: url('font/RobotoSlab-Light.ttf') format('truetype');;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: "Roboto Slab";
+            src: url('font/RobotoSlab-Thin.ttf') format('truetype');;
+            font-weight: 100;
+        }
+
         html,
         body {
             margin: 0;
@@ -21,7 +42,7 @@
         }
 
         #app,
-        .compass{
+        .compass {
             margin: 15px;
         }
     </style>
