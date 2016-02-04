@@ -1,0 +1,40 @@
+{
+  "name": "react-compass",
+  "description": "A carefully crafted Compass component for React.",
+  "version": "0.1.0",
+  "main": [
+    "dist/react-compass.min.js",
+    "dist/react-compass.min.css"
+  ],
+  "authors": [
+    "virtyaluk <winsatana@gmail.com> (http://modern-dev.com/)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "compass",
+    "ui"
+  ],
+  "homepage": "https://github.com/virtyaluk/react-compass",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".idea/",
+    ".codeclimate.yml",
+    ".eslintrc",
+    ".npmignore",
+    ".travis.yml",
+    "media/",
+    "example/"
+  ]
+}
