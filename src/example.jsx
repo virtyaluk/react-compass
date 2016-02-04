@@ -1,5 +1,6 @@
 /**
  * ReactCompass - a carefully crafted Compass component for React.
+ * https://github.com/virtyaluk/react-compass
  *
  * Copyright (c) 2016 Bohdan Shtepan
  * http://modern-dev.com/
@@ -8,7 +9,7 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import ReactCompass from './ReactCompass';
 
 class ReactApp extends React.Component {
@@ -16,17 +17,17 @@ class ReactApp extends React.Component {
         rangeVal: 0
     };
 
-    render() {
-        let rangeOnChange = (e) => this.setState({ rangeVal: parseInt(e.target.value, 10) });
-
-        return (
-            <div>
-                <ReactCompass direction={this.state.rangeVal}/>
-                <input type="range" onChange={rangeOnChange.bind(this)} onInput={rangeOnChange.bind(this)}
-                       style={ { marginTop: '15px', width: '520px' } } max="360" min="0"/>
-            </div>
-        );
+    rangeOnChange(e) {
+        this.setState({ rangeVal: parseInt(e.target.value, 10) });
     }
+
+    render = () => (
+        <div>
+            <ReactCompass direction={this.state.rangeVal}/>
+            <input type="range" max="360" min="0"
+                   onChange={this.rangeOnChange.bind(this)} onInput={this.rangeOnChange.bind(this)}/>
+        </div>
+    );
 }
 
-ReactDOM.render(<ReactApp />, document.getElementById('app'));
+render(<ReactApp />, document.getElementById('app'));
